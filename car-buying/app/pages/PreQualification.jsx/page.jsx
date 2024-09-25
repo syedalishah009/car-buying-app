@@ -5,6 +5,7 @@ import PersonalInfo from "@/app/components/PersonalInfo";
 import Residence from "@/app/components/Residence";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { IoArrowBack } from "react-icons/io5";
 
 const steps = [
   "Personal Info",
@@ -45,17 +46,14 @@ export default function PreQualification() {
   return (
     <div
       className="min-h-screen bg-cover bg-center flex items-center justify-center flex-col"
-      style={{ backgroundImage: "url(/path-to-your-background.jpg)" }} // You can also use a solid background here
+      style={{ backgroundImage: "url(/bg.png)" }} // You can also use a solid background here
     >
-      <div className="w-full max-w-4xl mx-auto p-6 md:p-8 lg:p-12 bg-white bg-opacity-90 shadow-lg rounded-lg">
+      <div className="w-full max-w-4xl mx-auto p-6 md:p-8 lg:p-12 bg-white shadow-lg rounded-lg">
         {/* Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-16">
           <h1 className="text-2xl font-semibold text-gray-800">
             Finance Pre-Qualification
           </h1>
-          <p className="text-red-600 text-lg mt-2">
-            Let us know about your current residence!
-          </p>
         </div>
 
         {/* Steps Navigation */}
@@ -95,26 +93,35 @@ export default function PreQualification() {
         </div>
 
         {/* Render the current step */}
-        <div className="mb-8">{renderStepContent()}</div>
+        <div className="mt-10">{renderStepContent()}</div>
       </div>
       {/* Navigation Buttons */}
       <div className="flex justify-end gap-3 w-2/3 mr-9 mt-8">
         <button
           onClick={handleBack}
           disabled={currentStep === 0}
-          className={`px-6 py-2 rounded-md ${
+          className={`px-2 py-1 rounded-md ${
             currentStep === 0
-              ? "bg-gray-300 cursor-not-allowed"
+              ? "bg-gray-100 cursor-not-allowed"
               : "bg-gray-300 text-gray-700 hover:bg-gray-400"
           }`}
         >
-          Back
+          <div className="text-2xl hover:text-white font-semibold">
+            {" "}
+            <IoArrowBack />
+          </div>
         </button>
         <button
           onClick={handleNext}
-          className="px-4 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
+          className="px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
         >
-          {currentStep === steps.length - 1 ? "Submit" : <div><FaArrowRight /></div>}
+          {currentStep === steps.length - 1 ? (
+            "Submit"
+          ) : (
+            <div className=" text-lg">
+              <FaArrowRight />
+            </div>
+          )}
         </button>
       </div>
     </div>
