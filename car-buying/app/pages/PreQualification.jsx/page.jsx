@@ -7,12 +7,33 @@ import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoArrowBack } from "react-icons/io5";
 
+// Step titles, descriptions, and content mapping
 const steps = [
-  "Personal Info",
-  "Residence",
-  "Employment",
-  "Verification",
-  "Summary",
+  { 
+    title: "Personal Info", 
+    description: "Pre-qualify in minutes to check the financial rates!", 
+    component: <PersonalInfo /> 
+  },
+  { 
+    title: "Residence", 
+    description: "Hi JP ! Let us know about your current residence.", 
+    component: <Residence /> 
+  },
+  { 
+    title: "Employment", 
+    description: "Next, tell us about your employment status.", 
+    component: <Employment /> 
+  },
+  { 
+    title: "Verification", 
+    description: "Now, we just need a little more information to see if you pre-qualify.", 
+    component: <div>Verification Content</div> 
+  },
+  { 
+    title: "Summary", 
+    description: "Let’s double-check everything.", 
+    component: <div>Summary Content</div> 
+  },
 ];
 
 export default function PreQualification() {
@@ -30,30 +51,20 @@ export default function PreQualification() {
     }
   };
 
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case 0:
-        return <PersonalInfo />;
-      case 1:
-        return <Residence />;
-      case 2:
-        return <Employment />;
-      default:
-        return <PersonalInfo />;
-    }
-  };
-
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center flex-col"
+      className="min-h-screen bg-cover bg-center flex items-center justify-center py-10 flex-col"
       style={{ backgroundImage: "url(/bg.png)" }} // You can also use a solid background here
     >
+    
+
+      {/* Main content box */}
       <div className="w-full max-w-4xl mx-auto p-6 md:p-8 lg:p-12 bg-white shadow-lg rounded-lg">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-2xl font-semibold text-gray-800">
-            Finance Pre-Qualification
-          </h1>
+        {/* Dynamic Subheader based on current step */}
+        <div className="text-center mb-8">
+          <p className="text-red-600 font-semibold text-lg mt-2">
+            {steps[currentStep].description} {/* Dynamic description */}
+          </p>
         </div>
 
         {/* Steps Navigation */}
@@ -76,7 +87,7 @@ export default function PreQualification() {
                     index <= currentStep ? "text-red-600" : "text-black"
                   }`}
                 >
-                  {step}
+                  {step.title}
                 </span>
               </div>
 
@@ -92,9 +103,10 @@ export default function PreQualification() {
           ))}
         </div>
 
-        {/* Render the current step */}
-        <div className="mt-10">{renderStepContent()}</div>
+        {/* Render the current step content */}
+        <div className="mt-10">{steps[currentStep].component}</div>
       </div>
+
       {/* Navigation Buttons */}
       <div className="flex justify-end gap-3 w-2/3 mr-9 mt-8">
         <button
@@ -118,11 +130,16 @@ export default function PreQualification() {
           {currentStep === steps.length - 1 ? (
             "Submit"
           ) : (
-            <div className=" text-lg">
+            <div className="text-lg">
               <FaArrowRight />
             </div>
           )}
         </button>
+      </div>
+      
+      {/* Footer */}
+      <div className="mt-8">
+        <p>© 2024 VisiblePaths, Inc. All Rights Reserved.</p>
       </div>
     </div>
   );

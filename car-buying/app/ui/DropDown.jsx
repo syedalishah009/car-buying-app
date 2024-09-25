@@ -18,12 +18,12 @@ const Dropdown = ({ options, label, onSelect }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <button
         onClick={toggleDropdown}
         className="block w-full text-left border rounded p-2 bg-white flex justify-between items-center"
       >
-        <span>{selectedOption ? selectedOption.label : label}</span>
+        <span className=''>{selectedOption ? selectedOption.label : label}</span>
         <AiOutlineDown className="ml-2" />
       </button>
       {isOpen && (

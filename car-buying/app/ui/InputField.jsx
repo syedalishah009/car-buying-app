@@ -2,7 +2,7 @@
 const InputField = ({ id, label, type = "text", placeholder, required = false }) => {
     return (
       <div className="">
-        <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+        <label htmlFor={id} className="block text-sm font-semibold text-gray-700">
           {label} {required && <span className="text-red-600">*</span>}
         </label>
         <input
