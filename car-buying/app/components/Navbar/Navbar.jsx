@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from 'react';
 import Image from 'next/image';
 import LanguageSelector from './LanguageSelector';
@@ -13,7 +13,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between px-6 py-3 bg-gray-800 text-white">
+    <nav className="navbar flex items-center bg-gray-600  justify-between px-6 py-3 text-white">
       {/* Left side: Logo */}
       <div className="flex items-center space-x-3">
         <Image
@@ -40,7 +40,7 @@ export default function Navbar() {
 
       {/* Toggle Menu (Visible on Small Screens) */}
       {isOpen && (
-        <div className="absolute top-16 right-0 mt-2 w-full bg-gray-800 sm:hidden flex flex-col items-center space-y-4 py-4 z-50">
+        <div className="absolute top-16 right-0 mt-2 w-full bg-gray-800 bg-opacity-90 sm:hidden flex flex-col items-center space-y-4 py-4 z-50">
           <LanguageSelector />
           <ProfileButton />
         </div>

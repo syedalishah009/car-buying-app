@@ -1,7 +1,7 @@
-// components/LanguageSelector.js
 'use client'; // Next.js directive to make this component client-side
 
 import { useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa'; // Import the down arrow icon
 
 export default function LanguageSelector() {
   const [language, setLanguage] = useState('US'); // Default language
@@ -17,7 +17,7 @@ export default function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown
-        className="flex items-center space-x-2 border border-gray-600 px-3 py-2 rounded-md hover:bg-gray-700"
+        className="flex items-center space-x-2  px-3 py-2 rounded-md hover:bg-gray-700"
       >
         <img
           src={language === 'US' ? '/us-flag.png' : '/uk-flag.png'}
@@ -25,10 +25,11 @@ export default function LanguageSelector() {
           className="h-5 w-5"
         />
         <span>{language === 'US' ? 'English (US)' : 'English (UK)'}</span>
+        <FaChevronDown className={`transition-transform ${dropdownOpen ? 'rotate-180' : 'rotate-0'}`} /> {/* Down arrow with rotation */}
       </button>
 
       {dropdownOpen && (
-        <div className="absolute mt-2 right-0 w-32 bg-white text-black rounded-md shadow-lg">
+        <div className="absolute mt-2 right-0 w-32 bg-white text-black rounded-md shadow-lg z-50">
           <button
             onClick={() => handleLanguageChange('US')}
             className="flex items-center w-full px-3 py-2 hover:bg-gray-200"
