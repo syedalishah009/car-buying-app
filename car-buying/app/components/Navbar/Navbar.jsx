@@ -13,15 +13,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar flex items-center bg-gray-600  justify-between px-6 py-3 text-white">
+    <nav className="flex items-center justify-between px-6 py-3 bg-transparent text-white w-full max-w-[75]">
+
       {/* Left side: Logo */}
       <div className="flex items-center space-x-3">
         <Image
           src="/logo.png" // Your logo here
           alt="Logo"
           className="w-44 sm:w-full sm:h-full"
-          width={250}
-          height={250}
+          width={300}
+          height={300}
         />
       </div>
 

@@ -8,6 +8,7 @@ import Summary from "@/app/components/Summary";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoArrowBack } from "react-icons/io5";
+import Navbar from "@/app/components/Navbar/Navbar";
 
 // Step titles, descriptions, and content mapping
 const steps = [
@@ -56,9 +57,10 @@ export default function PreQualification() {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center flex items-center px-3 justify-center py-10 flex-col"
+      className="min-h-screen bg-cover bg-center flex items-center px-3 justify-center flex-col"
       style={{ backgroundImage: "url(/bg.png)" }} // You can also use a solid background here
     >
+      <Navbar/>
       {/* Main content box */}
       <div className="w-full max-w-4xl mx-auto p-6 md:p-8 lg:p-12 bg-[#F7F7F7] shadow-lg rounded-lg">
         {/* Dynamic Subheader based on current step */}
