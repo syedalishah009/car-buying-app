@@ -19,9 +19,9 @@ export default function Navbar() {
         <Image
           src="/logo.png" // Your logo here
           alt="Logo"
-          className=""
-          width={300}
-          height={300}
+          className="w-44 sm:w-full sm:h-full"
+          width={250}
+          height={250}
         />
       </div>
 

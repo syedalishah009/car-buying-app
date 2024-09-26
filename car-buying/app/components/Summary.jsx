@@ -14,16 +14,16 @@ const ApplicationForm = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div>
-              <span className="font-bold">Name</span>
-              <p>JP Smith</p>
+              <span className="font-bold text-black">Name</span>
+              <p className="text-black">JP Smith</p>
             </div>
             <div>
-              <span className="font-bold">Email</span>
-              <p>jpsmith@visiblepaths.com</p>
+              <span className="font-bold text-black">Email</span>
+              <p className="text-black">jpsmith@visiblepaths.com</p>
             </div>
             <div>
-              <span className="font-bold">Phone Number</span>
-              <p>508-000-0000</p>
+              <span className="font-bold text-black">Phone Number</span>
+              <p className="text-black">508-000-0000</p>
             </div>
           </div>
         </div>
@@ -38,16 +38,16 @@ const ApplicationForm = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div>
-              <span className="font-bold">Address</span>
-              <p>100 Main Street, City, State, ZIP</p>
+              <span className="font-bold text-black">Address</span>
+              <p className="text-black">100 Main Street, City, State, ZIP</p>
             </div>
             <div>
-              <span className="font-bold">Time At Residence</span>
-              <p>3 years 4 months</p>
+              <span className="font-bold text-black">Time At Residence</span>
+              <p className="text-black">3 years 4 months</p>
             </div>
             <div>
-              <span className="font-bold">Monthly House Expense</span>
-              <p>$1,100</p>
+              <span className="font-bold text-black">Monthly House Expense</span>
+              <p className="text-black">$1,100</p>
             </div>
           </div>
         </div>
@@ -62,20 +62,20 @@ const ApplicationForm = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div>
-              <span className="font-bold">Status</span>
-              <p>Full-Time Employee</p>
+              <span className="font-bold text-black">Status</span>
+              <p className="text-black">Full-Time Employee</p>
             </div>
             <div>
-              <span className="font-bold">Job Title</span>
-              <p>Tech</p>
+              <span className="font-bold text-black">Job Title</span>
+              <p className="text-black">Tech</p>
             </div>
             <div>
-              <span className="font-bold">Time At Employer</span>
-              <p>5 Years</p>
+              <span className="font-bold text-black">Time At Employer</span>
+              <p className="text-black">5 Years</p>
             </div>
             <div>
-              <span className="font-bold">Monthly Income</span>
-              <p>$2,800</p>
+              <span className="font-bold text-black">Monthly Income</span>
+              <p className="text-black">$2,800</p>
             </div>
           </div>
         </div>
@@ -90,12 +90,12 @@ const ApplicationForm = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <span className="font-bold">Social Security Number</span>
-              <p>XXX-XX-XXXX</p>
+              <span className="font-bold text-black">Social Security Number</span>
+              <p className="text-black">XXX-XX-XXXX</p>
             </div>
             <div>
-              <span className="font-bold">Date of Birth</span>
-              <p>DD/MM/YY</p>
+              <span className="font-bold text-black">Date of Birth</span>
+              <p className="text-black">DD/MM/YY</p>
             </div>
           </div>
         </div>
