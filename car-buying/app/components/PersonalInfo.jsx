@@ -31,6 +31,13 @@ export default function PersonalInfo() {
         placeholder="Confirm Email Address"
         required={true}
       />
+      <InputField
+        id="Phone Number"
+        label="Phone Number"
+        type="number"
+        placeholder="Phone Number"
+        required={true}
+      />
     </div>
   );
 }
