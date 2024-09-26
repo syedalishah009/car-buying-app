@@ -108,10 +108,10 @@ export default function PreQualification() {
                 {/* Line Connector */}
                 {index < steps.length - 1 && (
                   <div
-                    className={`absolute top-4 left-1/2 transform -translate-x-2/2 h-1 w-full ${
-                      index < currentStep ? "bg-red-600" : "bg-gray-600"
+                    className={`absolute top-4 left-1/2 transform -translate-x-2/2 h-[2px] w-full ${
+                      index < currentStep ? "bg-red-600" : "bg-black"
                     }`}
-                    style={{ width: "calc(100% + 100px)", zIndex: 1 }}
+                    style={{ width: "calc(100% + 120px)", zIndex: 1 }}
                   ></div>
                 )}
               </div>
